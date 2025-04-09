@@ -12,8 +12,8 @@ connectDB();
 
 // Synchronisation des tables MySQL
 sequelize.sync({ alter: true })
-    .then(() => console.log('✅ Tables synchronized'))
-    .catch(err => console.error('❌ Error syncing tables:', err));
+    .then(() => console.log(' Tables synchronized'))
+    .catch(err => console.error(' Error syncing tables:', err));
 
 // Middlewares
 app.use(cors());
@@ -23,4 +23,17 @@ app.use(express.json());
 app.use('/api', transactionsRoutes);
 
 // Démarrer le serveur
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(` Server running on http://localhost:${PORT}`));
+
+
+const path=require("path")
+
+//servire les fichiers react en production 
+if (process.env.NODE_ENV ==='production') {
+    app.use(express.static(path.join(__dirname,"frontend/build")))
+
+    app.get("*",(req,res)=>{
+        res.sendFile(path.join(__dirname,'frontend/build',indexedDB.html))
+    })
+}
+//Ça permet de servir automatiquement ton interface React quand l’app est déployée

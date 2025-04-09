@@ -72,7 +72,8 @@ function ExpenseForm() {
                     <option value="" disabled >Selectioner une Option</option>
                     <option value="education">Education</option>
                     <option value="health">Santé</option>
-                    <option value="travelling">Voyage</option>  
+                    <option value="travelling">Voyage</option> 
+                    <option value="achats">Achats</option>   
                     <option value="other">autre</option>  
                 </select>
             </div>
