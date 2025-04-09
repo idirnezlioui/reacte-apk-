@@ -1,0 +1,12 @@
+# Node modules (frontend + backend)
+frontend/node_modules/
+backend/node_modules/
+
+# Build React (Render va le générer)
+frontend/build/
+
+# Logs
+*.log
+
+# Env files
+.env
