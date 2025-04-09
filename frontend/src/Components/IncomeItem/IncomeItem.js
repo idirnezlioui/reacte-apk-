@@ -1,6 +1,6 @@
 import React from 'react'
 import { dateFormat } from '../../utils/dateFormat';
-import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
+import { achats, bitcoin, book, calender, card, circle, clothing, comment, dollar, factures, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
 import Button from '../Button/Button';
 import { IncomeItemStyled } from '../../styles/incomeItemStyle';
 function IncomeItem({
@@ -19,7 +19,7 @@ function IncomeItem({
             case 'salary':
                 return money;
             case 'freelancing':
-                return freelance
+                return freelance;
             case 'investments':
                 return stocks;
             case 'stocks':
@@ -53,6 +53,10 @@ function IncomeItem({
                 return clothing;
             case 'travelling':
                 return freelance;
+            case 'achats':
+                return achats;
+            case 'factures':
+                return factures;
             case 'other':
                 return circle;
             default:

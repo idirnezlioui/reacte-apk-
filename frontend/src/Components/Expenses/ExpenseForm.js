@@ -6,7 +6,6 @@ import Button from '../Button/Button';
 import { plus } from '../../utils/Icons';
 import { ExpenseFormStyled } from '../../styles/expenseFormStyle';
 
-
 function ExpenseForm() {
     const {addExpense, error, setError} = useGlobalContext()
     const [inputState, setInputState] = useState({
@@ -73,7 +72,8 @@ function ExpenseForm() {
                     <option value="education">Education</option>
                     <option value="health">Santé</option>
                     <option value="travelling">Voyage</option> 
-                    <option value="achats">Achats</option>   
+                    <option value="achats">Achats</option> 
+                    <option value="factures">factures</option>   
                     <option value="other">autre</option>  
                 </select>
             </div>
